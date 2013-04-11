@@ -213,6 +213,44 @@ var deleteArmor = function(){
 	}); 
  });
  
+ $('#index').on('pageinit', function(){
+	//code needed for home page goes here
+	$('submit').on('click', function(){
+
+		var myForm = $('#addArmor');
+		    myForm.validate({
+			invalidHandler: function(form, validator) {
+			},
+			submitHandler: function() {
+		var data = myForm.serializeArray();
+			storeData(data);
+		}
+	
+		var storeData = function(data){
+		if(!key){
+			var id			= Math.floor(Math.random()*100000001);
+		}else{
+			id = key;
+		}
+		
+		var item					= {};
+			item.armorName			= ["Armor Name: ", $('#armorName').val()];
+			item.armorColor			= ["Color: ", $('#armorColor').val()];
+			item.repaired		= ["Repaired: ", $('#repaired').val()];
+		
+		localStorage.setItem(id, JSON.stringify(item));
+		alert("Armor Saved!");
+		save.off("click");
+		save.on("click", storeData);
+		window.location.reload();
+	
+	});	};
+ 
+	
+	//any other code needed for addItem page goes here
+	
+});
+ 
 //	var urlVars = function () {
 //    	var urlData = $($.mobile.activePage).data("url");
 //    	var urlParts = urlData.split('?');
