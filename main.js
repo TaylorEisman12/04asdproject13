@@ -11,6 +11,132 @@ $("#index header a").on('click', function() {
  	
  });
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ var autofillData = function (){
+	 .each(var n in json){
+			var id = Math.floor(Math.random()*100000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+		}
+};
+
+var getData = function(){
+	$("#addArmor").empty();
+		if(localStorage.length === 0){
+			alert("There is no Local Storage so default data was added.");
+			autoFillData();
+		}
+		var makeDiv = $('<div>');
+		makeDiv.attr("id", "items");
+		var makeList = $('<ul>');
+		makeDiv.append(makeList);
+		document.body.appendChild(makeDiv);
+		$('#armorList').append(makeDiv);
+		$('#items').show();
+		for(var i=0, len=localStorage.length; i<len;i++){
+			var makeli = $('<li>');
+			var linksLi = $('<li>');
+			makeList.append(makeli);
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			var obj = JSON.parse(value);
+			var makeSubList = $('<ul>');
+			makeli.append(makeSubList);
+			getImage(obj.category[1], makeSubList);
+			for(var n in obj){
+				var makeSubli = $('<li>');
+				makeSubList.append(makeSubli);
+				var optSubText = obj[n][0]+" "+obj[n][1];
+				makeSubli.text(optSubText);
+				makeSubList.append(linksLi);
+			}
+			makeItemLinks(localStorage.key(i), linksLi);
+		}
+
+};
+
+
+var storeData = function(data){
+	if(!key){
+			var id			= Math.floor(Math.random()*100000001);
+		}else{
+			id = key;
+		}
+		getSelectedRadio();
+		getCheckboxValue();
+
+		var item					= {};
+			item.armorName			= ["Armor Name: ", $('#armorName').val()];
+			item.armorColor			= ["Color: ", $('#armorColor').val()];
+			item.repaired			= ["Repaired: ", $('#repaired').val()];
+
+		localStorage.setItem(id, JSON.stringify(item));
+		alert("Armor Saved!");
+		save.off("click");
+		save.on("click", storeData);
+		window.location.reload();
+
+	};
+};
+
+var	deleteItem = function (){
+	var ask = confirm("Are you sure you want to delete this Armor?");
+		if(ask){
+			localStorage.removeItem(this.key);
+			alert("Armor was deleted.");
+			window.location.reload();
+		}else{
+			alert("Armor was not deleted.");
+		}		
+};
+
+
+
+var clearLocal = function(){
+	if(localStorage.length === 0){
+			alert("No data to clear.");
+		}else{
+			localStorage.clear();
+			alert("All Armor is deleted");
+			window.location.reload();
+			return false;
+		}
+	}
+
+	var clearLink = ge('clear');
+	clearLink.addEventListener("click", clearLocal);
+	var save = ge('submit');
+	save.addEventListener("click", validate);
+
+};
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  $('#editButton').on('click', function(){ editArmor() });
  $('#deleteButton').on('click', function() { deleteArmor() });
  
@@ -28,7 +154,7 @@ $("#index header a").on('click', function() {
 		}
 	});
 };
-
+/*
 var deleteArmor = function(){
 	var itemKey = $(this).data('key');
 	console.log("Key:", itemKey);
@@ -273,4 +399,4 @@ var deleteArmor = function(){
 //    	key: "armor=" + armorName
 //    });
 //});
- 
+ */
