@@ -1,9 +1,6 @@
 // Taylor Eisman
 // 04/2013
 // main.js
-// Taylor Eisman
-// 04/2013
-// main.js
 
 $("#index header a").on('click', function() { 
     alert("Save a list of your Armors.");
