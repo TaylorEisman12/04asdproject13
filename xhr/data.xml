@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <armors>
+        <item>
+            <armorName>WitchRing</armorName>
+            <selectColor>Green</selectColor>
+            <repaired>Yes</repaired>
+        </item>
+        <item>
+            <armorName>MonkStone</armorName>
+            <selectColor>Blue</selectColor>
+            <repaired>No</repaired>
+       </item>
+       <item>
+            <armorName>BracerCopper</armorName>
+            <selectColor>Yellow</selectColor>
+            <repaired>Yes</repaired>
+       </item>
+       <item>
+            <armorName>ArmBrass</armorName>
+            <selectColor>Red</selectColor>
+            <repaired>No</repaired>
+       </item>
+    </armors>
