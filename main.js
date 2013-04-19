@@ -93,7 +93,7 @@ $('#viewData').empty();
 
 });
  
- 
+ /*
  
  
  $('#submit').on('click', function () {
