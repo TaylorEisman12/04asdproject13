@@ -71,11 +71,40 @@
 					<ul>
 						<li><a href="#remoteData" data-icon="plus">Remote Data</a></li>
 						<li><a href="#index" data-icon="home" class="ui-btn-active">Home</a></li>
-						<li><a href="#localStorage" data-icon="box">Local Storage</a></li>
+						<li><a href="#localStorage" data-icon="box">XHR Data</a></li>
 					</ul>
 				</div><!-- NAVBAR -->
 			</div><!-- FOOTER -->
 		</div> <!-- END INDEX PAGE -->
+		
+			<section id="remoteData" data-role="page" data-add-back-btn="true">
+				<header data-role="header">
+					<h1>Remote Data</h1>
+					<nav data-role="navbar">
+						<ul>
+							<li><a href="#csvData" id="csvButton">CSV Data</a></li>
+							<li><a href="#jsonData" id="jsonButton">JSON Data</a></li>
+							<li><a href="#xmlData" id="xmlButton">XML Data</a></li>
+						</ul>
+					</nav>
+				</header>
+				<div data-role="content" id="remoteContent">
+					<div data-role="fieldcontain" id="viewData">
+ 
+					</div>
+				</div><!-- CONTENT -->
+				<div data-role="footer" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#remoteData" data-icon="plus">Remote Data</a></li>
+							<li><a href="#index" data-icon="home">Home</a></li>
+							<li><a href="#localStorage" data-icon="box" class="ui-btn-active">XHR Data</a></li>
+					</ul>
+					</div><!-- NAVBAR -->
+				</div><!-- FOOTER -->
+			</section><!-- END REMOTEDATA PAGE -->
+		
+		
   </body>
   	<script src="main.js" type="text/javascript"></script>
 </html>

@@ -1,0 +1,24 @@
+{
+    "armors" : [
+    {
+        "armorName": ["Armor Name:", "WitchRing"],
+        "selectColor": ["Color:", "Yellow"],
+        "repaired":	["repaired:", "No"]
+    },
+    {
+        "armorName": ["Armor Name:", "StoneofJordan"],
+        "selectColor": ["Color:", "Green"],
+        "repaired":	["repaired:", "Yes"]
+    },
+    {
+        "armorName": ["Armor Name:", "WizardStaff"],
+        "selectColor": ["Color:", "Red"],
+        "repaired":	["repaired:", "No"]
+    },
+    {
+        "armorName": ["Armor Name:", "MonkGreeves"],
+        "selectColor": ["Color:", "Blue"],
+        "repaired":	["repaired:", "Yes"]
+    }
+    ]
+}
