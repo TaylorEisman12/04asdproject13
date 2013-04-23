@@ -22,7 +22,7 @@ $("#index header a").on('click', function() {
                     $( ' ' +
 						'<div class="contentJSON">' +
 							'<ul>' +
-								'<li><b>' + item.armorName[0] + " " + item.armorName[1] + '</b></li>' +
+								'<li>' + '<b>' + item.armorName[0] + " " + item.armorName[1] + '</b>' + '</li>' +
 								'<li>' + item.selectColor[0] + " " + item.selectColor[1] + '</li>' +
 								'<li>' + item.repaired[0]	+ " " + item.repaired[1] + '</li>' +
 							'</ul>' +
