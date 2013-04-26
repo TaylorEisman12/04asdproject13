@@ -7,6 +7,87 @@ $("#index header a").on('click', function() {
  });
  
  
+ $('#submit').on('click', function(){
+	var selectColor = $('#selectColor').val();
+	console.log(selectColor);
+	var armorName = $('#armorName').val();
+	console.log(armorName);
+	var repaired = $('#repaired').val();
+	console.log(repaired);
+
+
+
+ });
+ 
+ /*
+ create dynamic link and bind to link not <li>
+ $('<a href="#">Link</a>')
+ .appendTo('#listId')
+ .wrap('<li />')
+ .bind('click', function(){
+		return false;
+ })
+ ;
+ 
+ 
+ 
+ bind multiple events
+ $('target').bind(type,data,function)
+ 
+ used for hover effect
+ ex: $("#link").on("mouseenter mouseleave", function(e){
+	return false;
+ });
+ 
+ $('target').bind( object ) // object with events as keys, paired with function handlers
+ 
+ $("#box").on({
+	click: function(e){},
+	mouseenter: function(e){},
+	mauseleave: function(e){}
+ });
+ 
+ custom event namespaces
+ $(target).on(type.namspace,data,function)
+ 
+ $("#box").on("click.topmenu", function(e){
+	return false;
+ });
+ usefull to unbind
+ $("#box").on("click.topmenu");
+ 
+ .one fires one time then unbinds itself
+ $('#save').one('click', function(){});
+ 
+ .toggle()
+ Toggle between functions per click as many as needed (must common 2)
+ $(target).toggle(oddFn, evenFn)
+ Ex
+ $("#link").toggle(
+	function(e){
+	},
+	function(e){
+	}
+ );
+ 
+ .live
+ same syntax as .bind
+ ex
+ $('"nav li a').live('click', function(){
+	$('<li><a href="#">Link</a></li>').appendTo('nav');
+	return false;
+ }); will allow you too bind function to dynamically added links
+ 
+ .die
+ used to unbind .live events
+ 
+ */
+ 
+ 
+ 
+ /*
+ 
+
 	$( '#remoteData' ).on('pageinit', function(){
 		$( '#jsonButton' ).on( 'click', function () {
 		$('#viewData').empty();
@@ -28,9 +109,11 @@ $("#index header a").on('click', function() {
 							'</ul>' +
 						'</div>'
 					).appendTo( '#viewData' );
+					
                 }
             }
         });
+		return false;
     });
 
 	$( '#xmlButton' ).on( 'click', function() {
@@ -54,9 +137,11 @@ $("#index header a").on('click', function() {
                                 '</ul>' +
                             '</div>'
 						).appendTo('#viewData');
+						
 					});
 				}
 			});
+			return false;
     });
 
 
@@ -86,11 +171,12 @@ $('#viewData').empty();
 			'</ul>' +
 		'</div>'
 				).appendTo('#viewData');
+				
 		}
             }
         });
     });
-
+return false;
 });
  
  /*
