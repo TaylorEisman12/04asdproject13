@@ -1,0 +1,10 @@
+{
+  "env": {
+    "local": {
+      "db": "http://127.0.0.1:5984/armordb"
+    },
+    "cloudant": {
+     "db": "https://orproassepahusentleyethe:eBU0x4PR6s31A41GGIGu48k7@tayloreisman.cloudant.com/armor"
+    }
+  }
+}
